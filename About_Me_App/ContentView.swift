@@ -22,28 +22,27 @@ struct ContentView: View {
                     .font(.title2)
                     .fontWeight(.semibold)
                     
-                HStack {
-                    Text("9th grade")
-                        .font(.title2)
-                        .multilineTextAlignment(.leading)
-                    
-                    Text("14 years old")
-                        .font(.title2)
-                        .multilineTextAlignment(.trailing)
-                    
-                }
                 Image("catpicture")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(20)
                     .padding()
-                    .background(Rectangle() .foregroundColor(.brown))
+                    .background(Rectangle() .foregroundColor(.white))
                     .cornerRadius(20)
-                    .padding()
-                
+                    
                 Text("This is me and my kitten, Junie!")
                     .font(.title3)
-                
+                    
+                Image("water")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(20)
+                    .padding()
+                    .background(Rectangle() .foregroundColor(.white))
+                    .cornerRadius(20)
+                    
+                Text("I love paddleboarding!")
+                    .font(.title3)
             }
             
         }
