@@ -9,31 +9,44 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        
-        VStack(spacing: 20.0) {
-            Text("ALL ABOUT ME!!")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .foregroundColor(Color.pink)
-            Text("Charlotte Hwang")
-                .font(.title2)
-                .fontWeight(.semibold)
-                .foregroundColor(Color(hue: 0.88, saturation: 0.939, brightness: 0.99))
-            HStack {
-                Text("9th grade")
-                    .multilineTextAlignment(.leading)
+        ZStack {
+            Color(.systemTeal)
+                .ignoresSafeArea()
+
+            VStack(spacing: 20.0) {
+                Text("ALL ABOUT ME!!")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
                 
-                Text("14 years old")
-                    .multilineTextAlignment(.trailing)
+                Text("Charlotte Hwang")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    
+                HStack {
+                    Text("9th grade")
+                        .font(.title2)
+                        .multilineTextAlignment(.leading)
+                    
+                    Text("14 years old")
+                        .font(.title2)
+                        .multilineTextAlignment(.trailing)
+                    
+                }
+                Image("catpicture")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(20)
+                    .padding()
+                    .background(Rectangle() .foregroundColor(.brown))
+                    .cornerRadius(20)
+                    .padding()
+                
+                Text("This is me and my kitten, Junie!")
+                    .font(.title3)
                 
             }
-            Image("catpicture")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .cornerRadius(20)
-            Text("This is me and my kitten, Junie!")
+            
         }
-        .padding()
     }
 }
 
